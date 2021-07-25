@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyssn Document</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper">
+    <table class="table">
+        <tbody id="myTable">
+
+        </tbody>
+    </table>
+    </div>
+</div>
+<script>
+
+    const list = [
+
+    {"fname":"esme", "lname":"sanchez", "id":1892038, "isTherapist":true},
+
+    {"fname":"rick", "lname":"jeps", "id":1894024, "isTherapist":false},
+
+    {"fname":"angie", "lname":"lange", "id":1982403, "isTherapist":false},
+
+    {"fname":"renat", "lname":"gros", "id":1894039, "isTherapist":true},
+
+    {"fname":"bettino", "lname":"yang", "id":3789204, "isTherapist":true}];
+
+    buildList(list);
+
+    function buildList(data) {
+        var myList = document.getElementById('myTable')
+
+        for (var i = 0; i < data.length; i++) {
+            var row = `<tr>
+                            <td>${data[i].lname}, ${data[i].fname}</td>
+                        </tr>`
+
+                myList.innerHTML += row;
+
+        }
+    }
+    </script>
+</body>
+</html>
